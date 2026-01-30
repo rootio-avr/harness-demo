@@ -1,0 +1,125 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://slsa.dev/go-build/v1",
+      "externalParameters": {
+        "repository": "https://github.com/openshift/oc",
+        "ref": "v4.17.30",
+        "commit": "v4.17.30",
+        "path": "cmd/oc",
+        "goVersion": "1.24.11",
+        "goos": "linux",
+        "goarch": "amd64",
+        "packagesUpgraded": []
+      },
+      "internalParameters": {
+        "builder": {
+          "id": "redhat.com/openshift/official-builds",
+          "version": "v1",
+          "note": "Official Red Hat FIPS-enabled build - not rebuilt by rootioinc"
+        },
+        "buildConfig": {
+          "cgoEnabled": true,
+          "fipsEnabled": true,
+          "buildFlags": "X:strictfipsruntime"
+        }
+      },
+      "resolvedDependencies": [
+        {
+          "uri": "git+https://github.com/openshift/oc@v4.17.30",
+          "digest": {
+            "gitCommit": "v4.17.30"
+          },
+          "localName": "source-repository",
+          "annotations": {
+            "type": "source-code",
+            "builder": "Red Hat"
+          }
+        },
+        {
+          "uri": "pkg:golang/stdlib@go1.24.11",
+          "digest": null,
+          "localName": "golang-stdlib",
+          "annotations": {
+            "originVersion": "go1.24.11",
+            "patchedVersion": "go1.24.11",
+            "type": "official-redhat-build",
+            "note": "FIPS-enabled Go build"
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/containerd/containerd@v1.7.11",
+          "digest": null,
+          "localName": "containerd",
+          "annotations": {
+            "originVersion": "v1.7.11",
+            "patchedVersion": "v1.7.11",
+            "type": "pending-vendor-update",
+            "vulnerabilities": ["CVE-2024-25621"],
+            "fixedIn": "1.7.29"
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/opencontainers/runc@v1.1.13",
+          "digest": null,
+          "localName": "runc",
+          "annotations": {
+            "originVersion": "v1.1.13",
+            "patchedVersion": "v1.1.13",
+            "type": "pending-vendor-update",
+            "vulnerabilities": ["CVE-2025-31133", "CVE-2025-52565", "CVE-2025-52881"],
+            "fixedIn": "1.2.8, 1.3.3, 1.4.0-rc.3"
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/opencontainers/selinux@v1.12.0",
+          "digest": null,
+          "localName": "selinux",
+          "annotations": {
+            "originVersion": "v1.12.0",
+            "patchedVersion": "v1.12.0",
+            "type": "pending-vendor-update",
+            "vulnerabilities": ["CVE-2025-52881"],
+            "fixedIn": "1.13.0"
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/sigstore/fulcio@v1.4.5",
+          "digest": null,
+          "localName": "fulcio",
+          "annotations": {
+            "originVersion": "v1.4.5",
+            "patchedVersion": "v1.4.5",
+            "type": "pending-vendor-update",
+            "vulnerabilities": ["CVE-2025-66506"],
+            "fixedIn": "1.8.3"
+          }
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "https://redhat.com/openshift/official-builds",
+        "version": {
+          "go": "1.24.11",
+          "os": "RHEL 9"
+        }
+      },
+      "metadata": {
+        "invocationId": "oc-v4.17.30-official-redhat-build",
+        "note": "Copied from harness/delegate:25.07.86408 - not rebuilt to preserve FIPS compliance"
+      },
+      "byproducts": null
+    }
+  },
+  "subject": [
+    {
+      "name": "oc",
+      "digest": {
+        "sha256": "c01bde7bbe6f95c785a3eaefa4d7004fbb7cd5659108572c5c6c57abcb7e9d07"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v1"
+}

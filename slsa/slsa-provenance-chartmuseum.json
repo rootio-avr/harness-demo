@@ -1,0 +1,122 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://slsa.dev/go-build/v1",
+      "externalParameters": {
+        "repository": "https://github.com/helm/chartmuseum",
+        "ref": "v0.16.3",
+        "commit": "v0.16.3",
+        "path": "cmd/chartmuseum",
+        "goVersion": "1.24.12",
+        "goos": "linux",
+        "goarch": "amd64",
+        "packagesUpgraded": [
+          "stdlib",
+          "github.com/containerd/containerd",
+          "golang.org/x/oauth2",
+          "helm.sh/helm/v3"
+        ]
+      },
+      "internalParameters": {
+        "builder": {
+          "id": "rootioinc/harness-delegate-secure-builds",
+          "version": "v1"
+        },
+        "buildConfig": {
+          "cgoEnabled": false
+        }
+      },
+      "resolvedDependencies": [
+        {
+          "uri": "git+https://github.com/helm/chartmuseum@v0.16.3",
+          "digest": {
+            "gitCommit": "v0.16.3"
+          },
+          "localName": "source-repository",
+          "annotations": {
+            "type": "source-code"
+          }
+        },
+        {
+          "uri": "pkg:golang/stdlib@go1.24.12",
+          "digest": null,
+          "localName": "golang-stdlib",
+          "annotations": {
+            "originVersion": "go1.24.1",
+            "patchedVersion": "go1.24.12",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2025-22874", "CVE-2025-47907", "CVE-2025-58183", "CVE-2025-61729"]
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/containerd/containerd@v1.7.29",
+          "digest": null,
+          "localName": "containerd",
+          "annotations": {
+            "originVersion": "v1.7.27",
+            "patchedVersion": "v1.7.29",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2024-25621"]
+          }
+        },
+        {
+          "uri": "pkg:golang/golang.org/x/oauth2@v0.27.0",
+          "digest": null,
+          "localName": "oauth2",
+          "annotations": {
+            "originVersion": "v0.23.0",
+            "patchedVersion": "v0.27.0",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2025-22868"]
+          }
+        },
+        {
+          "uri": "pkg:golang/helm.sh/helm/v3@v3.17.4",
+          "digest": null,
+          "localName": "helm",
+          "annotations": {
+            "originVersion": "v3.17.3",
+            "patchedVersion": "v3.17.4",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2025-53547"]
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/golang-jwt/jwt@v3.2.2+incompatible",
+          "digest": null,
+          "localName": "jwt",
+          "annotations": {
+            "originVersion": "v3.2.2+incompatible",
+            "patchedVersion": "v3.2.2+incompatible",
+            "type": "unfixed",
+            "note": "CVE-2025-30204 remains - requires migration to v5"
+          }
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "https://github.com/rootioinc/harness-delegate-secure-builds",
+        "version": {
+          "go": "1.24.12"
+        }
+      },
+      "metadata": {
+        "invocationId": "chartmuseum-v0.16.3-rebuild-20260127",
+        "startedOn": "2026-01-27T20:25:00Z",
+        "finishedOn": "2026-01-27T20:29:00Z"
+      },
+      "byproducts": null
+    }
+  },
+  "subject": [
+    {
+      "name": "chartmuseum",
+      "digest": {
+        "sha256": "55c710b5678cf54d3f1a4f44f60d616e790962117abafdc85f41c9a7926fee0a"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v1"
+}

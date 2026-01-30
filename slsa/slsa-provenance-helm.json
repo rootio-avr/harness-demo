@@ -1,0 +1,122 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://slsa.dev/go-build/v1",
+      "externalParameters": {
+        "repository": "https://github.com/helm/helm",
+        "ref": "v3.17.4",
+        "commit": "595a05d6fef072734e9f0153e0e222fe4dbd9de5",
+        "path": "cmd/helm",
+        "goVersion": "1.24.12",
+        "goos": "linux",
+        "goarch": "amd64",
+        "packagesUpgraded": [
+          "stdlib",
+          "github.com/containerd/containerd",
+          "github.com/docker/docker",
+          "golang.org/x/crypto",
+          "golang.org/x/oauth2"
+        ]
+      },
+      "internalParameters": {
+        "builder": {
+          "id": "rootioinc/harness-delegate-secure-builds",
+          "version": "v1"
+        },
+        "buildConfig": {
+          "cgoEnabled": true
+        }
+      },
+      "resolvedDependencies": [
+        {
+          "uri": "git+https://github.com/helm/helm@v3.17.4",
+          "digest": {
+            "gitCommit": "595a05d6fef072734e9f0153e0e222fe4dbd9de5"
+          },
+          "localName": "source-repository",
+          "annotations": {
+            "type": "source-code"
+          }
+        },
+        {
+          "uri": "pkg:golang/stdlib@go1.24.12",
+          "digest": null,
+          "localName": "golang-stdlib",
+          "annotations": {
+            "originVersion": "go1.20.11",
+            "patchedVersion": "go1.24.12",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2025-22874", "CVE-2025-47907", "CVE-2025-58183", "CVE-2025-61729"]
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/containerd/containerd@v1.7.30",
+          "digest": null,
+          "localName": "containerd",
+          "annotations": {
+            "originVersion": "v1.7.6",
+            "patchedVersion": "v1.7.30",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2024-25621"]
+          }
+        },
+        {
+          "uri": "pkg:golang/github.com/docker/docker@v27.5.0+incompatible",
+          "digest": null,
+          "localName": "docker",
+          "annotations": {
+            "originVersion": "v24.0.7+incompatible",
+            "patchedVersion": "v27.5.0+incompatible",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2024-41110"]
+          }
+        },
+        {
+          "uri": "pkg:golang/golang.org/x/crypto@v0.47.0",
+          "digest": null,
+          "localName": "crypto",
+          "annotations": {
+            "originVersion": "v0.14.0",
+            "patchedVersion": "v0.47.0",
+            "type": "upgraded-package"
+          }
+        },
+        {
+          "uri": "pkg:golang/golang.org/x/oauth2@v0.32.0",
+          "digest": null,
+          "localName": "oauth2",
+          "annotations": {
+            "originVersion": "v0.8.0",
+            "patchedVersion": "v0.32.0",
+            "type": "upgraded-package",
+            "vulnerabilitiesFixed": ["CVE-2025-22868"]
+          }
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "https://github.com/rootioinc/harness-delegate-secure-builds",
+        "version": {
+          "go": "1.24.12"
+        }
+      },
+      "metadata": {
+        "invocationId": "helm-v3.17.4-rebuild-20260127",
+        "startedOn": "2026-01-27T20:29:00Z",
+        "finishedOn": "2026-01-27T20:34:00Z"
+      },
+      "byproducts": null
+    }
+  },
+  "subject": [
+    {
+      "name": "helm",
+      "digest": {
+        "sha256": "b552e74641460035757e06ea22aad9a009350c016bb9e3be397bcf620adbed01"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v1"
+}
