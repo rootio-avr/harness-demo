@@ -57,7 +57,7 @@ Successfully reduced Go binary vulnerabilities from **63 HIGH/CRITICAL** in th
 
 ### **1. helm v3.17.4 (Rebuilt from source)**
 
-[upgrades-helm.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-helm.json)
+[upgrades-helm.json](docs/upgrades-helm.json)
 
 - **Baseline**: 11 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -86,7 +86,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **2. kubectl v1.34.3 (Rebuilt from source)**
 
-[upgrades-kubectl.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-kubectl.json)
+[upgrades-kubectl.json](docs/upgrades-kubectl.json)
 
 - **Baseline**: 7 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -104,7 +104,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **3. kubelogin v0.1.9 (Rebuilt from source)**
 
-[upgrades-kubelogin.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-kubelogin.json)
+[upgrades-kubelogin.json](docs/upgrades-kubelogin.json)
 
 - **Baseline**: 7 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -116,7 +116,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **4. go-template v0.4.9 (Rebuilt from source)**
 
-[upgrades-go-template.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-go-template.json)
+[upgrades-go-template.json](docs/upgrades-go-template.json)
 
 - **Baseline**: 3 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -131,7 +131,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **5. terraform-config-inspect v1.3 (Rebuilt from source)**
 
-[upgrades-terraform-config-inspect.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-terraform-config-inspect.json)
+[upgrades-terraform-config-inspect.json](docs/upgrades-terraform-config-inspect.json)
 
 - **Baseline**: 8 HIGH + 1 CRITICAL vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -157,7 +157,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **6. chartmuseum v0.16.3 (Rebuilt from source)**
 
-[upgrades-chartmuseum.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-chartmuseum.json)
+[upgrades-chartmuseum.json](docs/upgrades-chartmuseum.json)
 
 - **Baseline**: 8 HIGH vulnerabilities
 - **Final**: 1 HIGH vulnerability
@@ -192,7 +192,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 
 ### **7. oc v4.17.30 (Copied from Red Hat)**
 
-[upgrades-oc.json](Harness%20-%20Delegate%20Go%20Remediation/upgrades-oc.json)
+[upgrades-oc.json](docs/upgrades-oc.json)
 
 - **Baseline**: 13 HIGH vulnerabilities
 - **Final**: 6 HIGH vulnerabilities
@@ -420,7 +420,7 @@ All remaining CVEs are:
 
 ### **Functional Testing**
 
-[**Functional Test Plan: Harness Delegate**](https://www.notion.so/Functional-Test-Plan-Harness-Delegate-2f7d312b93ee80e3a92dc4dcc80f3338?pvs=21)
+[**Functional Test Plan: Harness Delegate**](functionality-tests/docs/FUNCTIONAL_TEST_PLAN.md)
 
 ---
 
@@ -453,26 +453,26 @@ If issues occur:
 
 - **Baseline Scan**: `trivy-scan-original-full.json` (original image)
 
-[trivy-scan-original-full.json](Harness%20-%20Delegate%20Go%20Remediation/trivy-scan-original-full.json)
+[trivy-scan-original-full.json](docs/trivy-scan-original-full.json)
 
 - **Baseline Summary**: `trivy-scan-original-summary.txt` (human-readable)
 
-[trivy-scan-original-summary.txt](Harness%20-%20Delegate%20Go%20Remediation/trivy-scan-original-summary.txt)
+[trivy-scan-original-summary.txt](docs/trivy-scan-original-summary.txt)
 
 - **Remediated Scan**: `trivy-scan-v3-full.json` (final image)
 
-[trivy-scan-v3-full.json](Harness%20-%20Delegate%20Go%20Remediation/trivy-scan-v3-full.json)
+[trivy-scan-v3-full.json](docs/trivy-scan-v3-full.json)
 
 - **Remediated Summary**: `trivy-scan-v3-summary.txt` (human-readable)
 
-[trivy-scan-v3-summary.txt](Harness%20-%20Delegate%20Go%20Remediation/trivy-scan-v3-summary.txt)
+[trivy-scan-v3-summary.txt](docs/trivy-scan-v3-summary.txt)
 
 ### **Build Documentation**
 
 - **This Report**: `DOCKER-IMAGE-SCAN-REPORT.md` (comprehensive comparison)
 - **Source Investigation**: `HARNESS-BINARIES-SOURCE-INVESTIGATION.md` (proprietary binaries)
 
-[HARNESS-BINARIES-SOURCE-INVESTIGATION.md](Harness%20-%20Delegate%20Go%20Remediation/HARNESS-BINARIES-SOURCE-INVESTIGATION.md)
+[HARNESS-BINARIES-SOURCE-INVESTIGATION.md](docs/HARNESS-BINARIES-SOURCE-INVESTIGATION.md)
 
 - **Upgrade Tracking**: `upgrades-*.json` (per-binary package upgrades)
 
@@ -498,16 +498,16 @@ If issues occur:
 | chartmuseum v0.16.3 | `slsa-provenance-chartmuseum.json` | ✅ Rebuilt | 1 |
 | oc v4.17.30 | `slsa-provenance-oc.json` | ⚠️ Red Hat Official | 6 |
 
-[slsa-provenance-chartmuseum.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-chartmuseum.json)
+[slsa-provenance-chartmuseum.json](docs/slsa/slsa-provenance-chartmuseum.json)
 
-[slsa-provenance-go-template.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-go-template.json)
+[slsa-provenance-go-template.json](docs/slsa/slsa-provenance-go-template.json)
 
-[slsa-provenance-helm.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-helm.json)
+[slsa-provenance-helm.json](docs/slsa/slsa-provenance-helm.json)
 
-[slsa-provenance-kubectl.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-kubectl.json)
+[slsa-provenance-kubectl.json](docs/slsa/slsa-provenance-kubectl.json)
 
-[slsa-provenance-kubelogin.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-kubelogin.json)
+[slsa-provenance-kubelogin.json](docs/slsa/slsa-provenance-kubelogin.json)
 
-[slsa-provenance-oc.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-oc.json)
+[slsa-provenance-oc.json](docs/slsa/slsa-provenance-oc.json)
 
-[slsa-provenance-terraform-config-inspect.json](Harness%20-%20Delegate%20Go%20Remediation/slsa-provenance-terraform-config-inspect.json)
+[slsa-provenance-terraform-config-inspect.json](docs/slsa/slsa-provenance-terraform-config-inspect.json)
