@@ -58,6 +58,7 @@ Successfully reduced Go binary vulnerabilities from **63 HIGH/CRITICAL** in th
 ### **1. helm v3.17.4 (Rebuilt from source)**
 
 [upgrades-helm.json](docs/upgrades-helm.json)
+[slsa-provenance-helm.json](docs/slsa/slsa-provenance-helm.json)
 
 - **Baseline**: 11 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
