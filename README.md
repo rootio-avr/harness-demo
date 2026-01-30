@@ -2,7 +2,7 @@
 
 **Baseline Image**: `harness/delegate:25.07.86408` 
 
-**Final Image**: `rootioinc/harness-delegate:25.07.86408-secure` 
+**Final Image**: `cr.root.io/harness/delegate:25.07.86408` 
 
 **Scan Date**: 2026-01-29 
 
