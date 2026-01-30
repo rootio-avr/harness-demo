@@ -88,6 +88,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 ### **2. kubectl v1.34.3 (Rebuilt from source)**
 
 [upgrades-kubectl.json](docs/upgrades-kubectl.json)
+[slsa-provenance-kubectl.json](docs/slsa/slsa-provenance-kubectl.json)
 
 - **Baseline**: 7 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -106,6 +107,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 ### **3. kubelogin v0.1.9 (Rebuilt from source)**
 
 [upgrades-kubelogin.json](docs/upgrades-kubelogin.json)
+[slsa-provenance-kubelogin.json](docs/slsa/slsa-provenance-kubelogin.json)
 
 - **Baseline**: 7 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -118,6 +120,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 ### **4. go-template v0.4.9 (Rebuilt from source)**
 
 [upgrades-go-template.json](docs/upgrades-go-template.json)
+[slsa-provenance-go-template.json](docs/slsa/slsa-provenance-go-template.json)
 
 - **Baseline**: 3 HIGH vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -133,6 +136,7 @@ v3.13.3 → v3.17.4 (4 minor versions)
 ### **5. terraform-config-inspect v1.3 (Rebuilt from source)**
 
 [upgrades-terraform-config-inspect.json](docs/upgrades-terraform-config-inspect.json)
+[slsa-provenance-terraform-config-inspect.json](docs/slsa/slsa-provenance-terraform-config-inspect.json)
 
 - **Baseline**: 8 HIGH + 1 CRITICAL vulnerabilities
 - **Final**: 0 vulnerabilities
@@ -159,6 +163,8 @@ v3.13.3 → v3.17.4 (4 minor versions)
 ### **6. chartmuseum v0.16.3 (Rebuilt from source)**
 
 [upgrades-chartmuseum.json](docs/upgrades-chartmuseum.json)
+[slsa-provenance-chartmuseum.json](docs/slsa/slsa-provenance-chartmuseum.json)
+
 
 - **Baseline**: 8 HIGH vulnerabilities
 - **Final**: 1 HIGH vulnerability
