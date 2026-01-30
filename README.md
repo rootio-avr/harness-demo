@@ -225,7 +225,6 @@ v3.13.3 → v3.17.4 (4 minor versions)
 **Why Not Fully Fixed**:
 
 - oc is Red Hat's official binary with FIPS compliance
-- Cannot rebuild without losing FIPS certification
 - OpenShift source is complex and tightly integrated with Red Hat's build system
 - **Recommendation**: Wait for Red Hat to release oc v4.18+ with updated dependencies
 
