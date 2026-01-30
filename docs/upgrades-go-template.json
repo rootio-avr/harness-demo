@@ -1,0 +1,33 @@
+[
+  {
+    "uri": "pkg:golang/stdlib@go1.24.12",
+    "digest": null,
+    "localName": "golang-stdlib",
+    "annotations": {
+      "originVersion": "go1.23.8",
+      "patchedVersion": "go1.24.12",
+      "type": "upgraded-package",
+      "upgradeType": "go-runtime",
+      "binary": "go-template",
+      "source": "github.com/harness/go-template",
+      "commit": "305018a"
+    }
+  },
+  {
+    "uri": "pkg:golang/golang.org/x/crypto@v0.47.0",
+    "digest": null,
+    "localName": "golang.org/x/crypto",
+    "annotations": {
+      "originVersion": "v0.35.0",
+      "patchedVersion": "v0.47.0",
+      "type": "upgraded-package",
+      "upgradeType": "minor",
+      "binary": "go-template",
+      "vulnerabilitiesFixed": [
+        "CVE-2025-47907",
+        "CVE-2025-58183",
+        "CVE-2025-61729"
+      ]
+    }
+  }
+]

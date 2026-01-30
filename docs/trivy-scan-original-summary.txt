@@ -1,0 +1,431 @@
+2026-01-29T15:26:38+05:30	INFO	[vuln] Vulnerability scanning is enabled
+2026-01-29T15:27:29+05:30	INFO	Detected OS	family="redhat" version="9.7"
+2026-01-29T15:27:29+05:30	INFO	[redhat] Detecting RHEL/CentOS vulnerabilities...	os_version="9" pkg_num=200
+2026-01-29T15:27:29+05:30	INFO	Number of language-specific files	num=11
+2026-01-29T15:27:29+05:30	INFO	[gobinary] Detecting vulnerabilities...
+2026-01-29T15:27:29+05:30	INFO	[jar] Detecting vulnerabilities...
+2026-01-29T15:27:29+05:30	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/v0.67/docs/scanner/vulnerability#severity-selection for details.
+2026-01-29T15:27:29+05:30	INFO	Table result includes only package filenames. Use '--format json' option to get the full path to the package file.
+
+Report Summary
+
+┌──────────────────────────────────────────────────────────────────────────────────┬──────────┬─────────────────┐
+│                                      Target                                      │   Type   │ Vulnerabilities │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ harness/delegate:25.07.86408 (redhat 9.7)                                        │  redhat  │        4        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/delegate.jar                                                │   jar    │        5        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ usr/share/java/bc/bcpg-jdk18on.jar                                               │   jar    │        0        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ usr/share/java/bc/bcpkix-jdk18on.jar                                             │   jar    │        0        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ usr/share/java/bc/bcprov-ext-jdk18on.jar                                         │   jar    │        0        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ usr/share/java/bc/bcprov-jdk18on.jar                                             │   jar    │        0        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/chartmuseum/v0.16.3/chartmuseum                │ gobinary │        8        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/go-template/v0.4.9/go-template                 │ gobinary │        3        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/harness-credentials-plugin/v0.1.1/harness-cre- │ gobinary │        4        │
+│ dentials-plugin                                                                  │          │                 │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/harness-helm-post-renderer/v0.1.5/harness-hel- │ gobinary │        3        │
+│ m-post-renderer                                                                  │          │                 │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/helm/v3.13.3/helm                              │ gobinary │       11        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/kubectl/v1.28.7/kubectl                        │ gobinary │        7        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/kubelogin/v0.1.9/kubelogin                     │ gobinary │        7        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/oc/v4.17.30/oc                                 │ gobinary │       13        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/scm/78ecffea3/scm                              │ gobinary │        4        │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┤
+│ opt/harness-delegate/client-tools/tf-config-inspect/v1.3/terraform-config-inspe- │ gobinary │        3        │
+│ ct                                                                               │          │                 │
+└──────────────────────────────────────────────────────────────────────────────────┴──────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+harness/delegate:25.07.86408 (redhat 9.7)
+=========================================
+Total: 4 (HIGH: 4, CRITICAL: 0)
+
+┌──────────────┬────────────────┬──────────┬──────────┬───────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
+│   Library    │ Vulnerability  │ Severity │  Status  │ Installed Version │  Fixed Version  │                            Title                             │
+├──────────────┼────────────────┼──────────┼──────────┼───────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg2       │ CVE-2026-24881 │ HIGH     │ affected │ 2.3.3-5.el9_7     │                 │ GnuPG: GnuPG: Remote code execution and denial of service    │
+│              │                │          │          │                   │                 │ via crafted CMS...                                           │
+│              │                │          │          │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-24881                   │
+│              ├────────────────┤          │          │                   ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-24882 │          │          │                   │                 │ GnuPG: GnuPG: Stack-based buffer overflow in tpm2daemon      │
+│              │                │          │          │                   │                 │ allows arbitrary code execution                              │
+│              │                │          │          │                   │                 │ https://avd.aquasec.com/nvd/cve-2026-24882                   │
+├──────────────┼────────────────┤          ├──────────┼───────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl      │ CVE-2025-15467 │          │ fixed    │ 1:3.5.1-5.el9_7   │ 1:3.5.1-7.el9_7 │ openssl: OpenSSL: Remote code execution or Denial of Service │
+│              │                │          │          │                   │                 │ via oversized Initialization...                              │
+│              │                │          │          │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-15467                   │
+├──────────────┤                │          │          │                   │                 │                                                              │
+│ openssl-libs │                │          │          │                   │                 │                                                              │
+│              │                │          │          │                   │                 │                                                              │
+│              │                │          │          │                   │                 │                                                              │
+└──────────────┴────────────────┴──────────┴──────────┴───────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
+
+Java (jar)
+==========
+Total: 5 (HIGH: 5, CRITICAL: 0)
+
+┌────────────────────────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│                    Library                     │ Vulnerability  │ Severity │ Status │ Installed Version │       Fixed Version        │                            Title                             │
+├────────────────────────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ io.grpc:grpc-netty-shaded (delegate.jar)       │ CVE-2025-55163 │ HIGH     │ fixed  │ 1.67.1            │ 1.75.0                     │ netty: netty-codec-http2: Netty MadeYouReset HTTP/2 DDoS     │
+│                                                │                │          │        │                   │                            │ Vulnerability                                                │
+│                                                │                │          │        │                   │                            │ https://avd.aquasec.com/nvd/cve-2025-55163                   │
+│                                                │                │          │        ├───────────────────┤                            │                                                              │
+│                                                │                │          │        │ 1.68.2            │                            │                                                              │
+│                                                │                │          │        │                   │                            │                                                              │
+│                                                │                │          │        │                   │                            │                                                              │
+├────────────────────────────────────────────────┤                │          │        ├───────────────────┼────────────────────────────┤                                                              │
+│ io.netty:netty-codec-http2 (delegate.jar)      │                │          │        │ 4.1.118.Final     │ 4.2.4.Final, 4.1.124.Final │                                                              │
+│                                                │                │          │        │                   │                            │                                                              │
+│                                                │                │          │        │                   │                            │                                                              │
+├────────────────────────────────────────────────┼────────────────┤          │        │                   ├────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ io.netty:netty-codec-smtp (delegate.jar)       │ CVE-2025-59419 │          │        │                   │ 4.2.7.Final, 4.1.128.Final │ io.netty/netty-codec-smtp: Netty netty-codec-smtp SMTP       │
+│                                                │                │          │        │                   │                            │ Command Injection                                            │
+│                                                │                │          │        │                   │                            │ https://avd.aquasec.com/nvd/cve-2025-59419                   │
+├────────────────────────────────────────────────┼────────────────┤          │        ├───────────────────┼────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ org.springframework:spring-core (delegate.jar) │ CVE-2025-41249 │          │        │ 6.1.20            │ 6.2.11                     │ org.springframework/spring-core: Spring Framework Annotation │
+│                                                │                │          │        │                   │                            │ Detection Vulnerability                                      │
+│                                                │                │          │        │                   │                            │ https://avd.aquasec.com/nvd/cve-2025-41249                   │
+└────────────────────────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴────────────────────────────┴──────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/chartmuseum/v0.16.3/chartmuseum (gobinary)
+============================================================================
+Total: 8 (HIGH: 8, CRITICAL: 0)
+
+┌──────────────────────────────────┬────────────────┬──────────┬──────────┬─────────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
+│             Library              │ Vulnerability  │ Severity │  Status  │  Installed Version  │  Fixed Version  │                            Title                             │
+├──────────────────────────────────┼────────────────┼──────────┼──────────┼─────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/containerd/containerd │ CVE-2024-25621 │ HIGH     │ fixed    │ v1.7.27             │ 1.7.29          │ github.com/containerd/containerd: containerd local privilege │
+│                                  │                │          │          │                     │                 │ escalation                                                   │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2024-25621                   │
+├──────────────────────────────────┼────────────────┤          ├──────────┼─────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/golang-jwt/jwt        │ CVE-2025-30204 │          │ affected │ v3.2.2+incompatible │                 │ golang-jwt/jwt: jwt-go allows excessive memory allocation    │
+│                                  │                │          │          │                     │                 │ during header parsing                                        │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-30204                   │
+├──────────────────────────────────┼────────────────┤          ├──────────┼─────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2              │ CVE-2025-22868 │          │ fixed    │ v0.23.0             │ 0.27.0          │ golang.org/x/oauth2/jws: Unexpected memory consumption       │
+│                                  │                │          │          │                     │                 │ during token parsing in golang.org/x/oauth2/jws              │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-22868                   │
+├──────────────────────────────────┼────────────────┤          │          ├─────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ helm.sh/helm/v3                  │ CVE-2025-53547 │          │          │ v3.17.3             │ 3.18.4, 3.17.4  │ helm.sh/helm/v3: Helm Chart Code Execution                   │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-53547                   │
+├──────────────────────────────────┼────────────────┤          │          ├─────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
+│ stdlib                           │ CVE-2025-22874 │          │          │ v1.24.1             │ 1.24.4          │ crypto/x509: Usage of ExtKeyUsageAny disables policy         │
+│                                  │                │          │          │                     │                 │ validation in crypto/x509                                    │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-22874                   │
+│                                  ├────────────────┤          │          │                     ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-47907 │          │          │                     │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                   │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                   │
+│                                  ├────────────────┤          │          │                     ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-58183 │          │          │                     │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU   │
+│                                  │                │          │          │                     │                 │ sparse map                                                   │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                   │
+│                                  ├────────────────┤          │          │                     ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-61729 │          │          │                     │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive      │
+│                                  │                │          │          │                     │                 │ resource consumption via crafted...                          │
+│                                  │                │          │          │                     │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
+└──────────────────────────────────┴────────────────┴──────────┴──────────┴─────────────────────┴─────────────────┴──────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/go-template/v0.4.9/go-template (gobinary)
+===========================================================================
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2025-47907 │ HIGH     │ fixed  │ v1.23.8           │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│         │                │          │        │                   │                 │ sparse map                                                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│         │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/harness-credentials-plugin/v0.1.1/harness-credentials-plugin (gobinary)
+=========================================================================================================
+Total: 4 (HIGH: 4, CRITICAL: 0)
+
+┌─────────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│       Library       │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2 │ CVE-2025-22868 │ HIGH     │ fixed  │ v0.18.0           │ 0.27.0          │ golang.org/x/oauth2/jws: Unexpected memory consumption     │
+│                     │                │          │        │                   │                 │ during token parsing in golang.org/x/oauth2/jws            │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-22868                 │
+├─────────────────────┼────────────────┤          │        ├───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib              │ CVE-2025-47907 │          │        │ v1.23.8           │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│                     │                │          │        │                   │                 │ sparse map                                                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│                     │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/harness-helm-post-renderer/v0.1.5/harness-helm-post-renderer (gobinary)
+=========================================================================================================
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2025-47907 │ HIGH     │ fixed  │ v1.22.12          │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│         │                │          │        │                   │                 │ sparse map                                                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│         │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/helm/v3.13.3/helm (gobinary)
+==============================================================
+Total: 11 (HIGH: 8, CRITICAL: 3)
+
+┌──────────────────────────────────┬────────────────┬──────────┬────────┬──────────────────────┬─────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│             Library              │ Vulnerability  │ Severity │ Status │  Installed Version   │          Fixed Version          │                            Title                             │
+├──────────────────────────────────┼────────────────┼──────────┼────────┼──────────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/containerd/containerd │ CVE-2024-25621 │ HIGH     │ fixed  │ v1.7.6               │ 1.7.29                          │ github.com/containerd/containerd: containerd local privilege │
+│                                  │                │          │        │                      │                                 │ escalation                                                   │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2024-25621                   │
+├──────────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/docker/docker         │ CVE-2024-41110 │ CRITICAL │        │ v24.0.7+incompatible │ 23.0.15, 26.1.5, 27.1.1, 25.0.6 │ moby: Authz zero length regression                           │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2024-41110                   │
+├──────────────────────────────────┼────────────────┤          │        ├──────────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/crypto              │ CVE-2024-45337 │          │        │ v0.14.0              │ 0.31.0                          │ golang.org/x/crypto/ssh: Misuse of                           │
+│                                  │                │          │        │                      │                                 │ ServerConfig.PublicKeyCallback may cause authorization       │
+│                                  │                │          │        │                      │                                 │ bypass in golang.org/x/crypto                                │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2024-45337                   │
+│                                  ├────────────────┼──────────┤        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-22869 │ HIGH     │        │                      │ 0.35.0                          │ golang.org/x/crypto/ssh: Denial of Service in the Key        │
+│                                  │                │          │        │                      │                                 │ Exchange of golang.org/x/crypto/ssh                          │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2025-22869                   │
+├──────────────────────────────────┼────────────────┤          │        ├──────────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2              │ CVE-2025-22868 │          │        │ v0.8.0               │ 0.27.0                          │ golang.org/x/oauth2/jws: Unexpected memory consumption       │
+│                                  │                │          │        │                      │                                 │ during token parsing in golang.org/x/oauth2/jws              │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2025-22868                   │
+├──────────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ stdlib                           │ CVE-2024-24790 │ CRITICAL │        │ v1.20.11             │ 1.21.11, 1.22.4                 │ golang: net/netip: Unexpected behavior from Is methods for   │
+│                                  │                │          │        │                      │                                 │ IPv4-mapped IPv6 addresses                                   │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2024-24790                   │
+│                                  ├────────────────┼──────────┤        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2023-45288 │ HIGH     │        │                      │ 1.21.9, 1.22.2                  │ golang: net/http, x/net/http2: unlimited number of           │
+│                                  │                │          │        │                      │                                 │ CONTINUATION frames causes DoS                               │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2023-45288                   │
+│                                  ├────────────────┤          │        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2024-34156 │          │        │                      │ 1.22.7, 1.23.1                  │ encoding/gob: golang: Calling Decoder.Decode on a message    │
+│                                  │                │          │        │                      │                                 │ which contains deeply nested structures...                   │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2024-34156                   │
+│                                  ├────────────────┤          │        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-47907 │          │        │                      │ 1.23.12, 1.24.6                 │ database/sql: Postgres Scan Race Condition                   │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2025-47907                   │
+│                                  ├────────────────┤          │        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-58183 │          │        │                      │ 1.24.8, 1.25.2                  │ golang: archive/tar: Unbounded allocation when parsing GNU   │
+│                                  │                │          │        │                      │                                 │ sparse map                                                   │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2025-58183                   │
+│                                  ├────────────────┤          │        │                      ├─────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                  │ CVE-2025-61729 │          │        │                      │ 1.24.11, 1.25.5                 │ crypto/x509: golang: Denial of Service due to excessive      │
+│                                  │                │          │        │                      │                                 │ resource consumption via crafted...                          │
+│                                  │                │          │        │                      │                                 │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
+└──────────────────────────────────┴────────────────┴──────────┴────────┴──────────────────────┴─────────────────────────────────┴──────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/kubectl/v1.28.7/kubectl (gobinary)
+====================================================================
+Total: 7 (HIGH: 6, CRITICAL: 1)
+
+┌─────────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│       Library       │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2 │ CVE-2025-22868 │ HIGH     │ fixed  │ v0.8.0            │ 0.27.0          │ golang.org/x/oauth2/jws: Unexpected memory consumption     │
+│                     │                │          │        │                   │                 │ during token parsing in golang.org/x/oauth2/jws            │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-22868                 │
+├─────────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib              │ CVE-2024-24790 │ CRITICAL │        │ v1.21.7           │ 1.21.11, 1.22.4 │ golang: net/netip: Unexpected behavior from Is methods for │
+│                     │                │          │        │                   │                 │ IPv4-mapped IPv6 addresses                                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-24790                 │
+│                     ├────────────────┼──────────┤        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2023-45288 │ HIGH     │        │                   │ 1.21.9, 1.22.2  │ golang: net/http, x/net/http2: unlimited number of         │
+│                     │                │          │        │                   │                 │ CONTINUATION frames causes DoS                             │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2023-45288                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2024-34156 │          │        │                   │ 1.22.7, 1.23.1  │ encoding/gob: golang: Calling Decoder.Decode on a message  │
+│                     │                │          │        │                   │                 │ which contains deeply nested structures...                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2024-34156                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-47907 │          │        │                   │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│                     │                │          │        │                   │                 │ sparse map                                                 │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│                     ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                     │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│                     │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│                     │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/kubelogin/v0.1.9/kubelogin (gobinary)
+=======================================================================
+Total: 7 (HIGH: 7, CRITICAL: 0)
+
+┌──────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│           Library            │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├──────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ github.com/golang-jwt/jwt/v4 │ CVE-2025-30204 │ HIGH     │ fixed  │ v4.5.1            │ 4.5.2           │ golang-jwt/jwt: jwt-go allows excessive memory allocation  │
+│                              │                │          │        │                   │                 │ during header parsing                                      │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-30204                 │
+├──────────────────────────────┤                │          │        ├───────────────────┼─────────────────┤                                                            │
+│ github.com/golang-jwt/jwt/v5 │                │          │        │ v5.2.1            │ 5.2.2           │                                                            │
+│                              │                │          │        │                   │                 │                                                            │
+│                              │                │          │        │                   │                 │                                                            │
+├──────────────────────────────┼────────────────┤          │        ├───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ golang.org/x/crypto          │ CVE-2025-22869 │          │        │ v0.31.0           │ 0.35.0          │ golang.org/x/crypto/ssh: Denial of Service in the Key      │
+│                              │                │          │        │                   │                 │ Exchange of golang.org/x/crypto/ssh                        │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-22869                 │
+├──────────────────────────────┼────────────────┤          │        ├───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2          │ CVE-2025-22868 │          │        │ v0.10.0           │ 0.27.0          │ golang.org/x/oauth2/jws: Unexpected memory consumption     │
+│                              │                │          │        │                   │                 │ during token parsing in golang.org/x/oauth2/jws            │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-22868                 │
+├──────────────────────────────┼────────────────┤          │        ├───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib                       │ CVE-2025-47907 │          │        │ v1.23.7           │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│                              ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                              │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│                              │                │          │        │                   │                 │ sparse map                                                 │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│                              ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│                              │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│                              │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│                              │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└──────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/oc/v4.17.30/oc (gobinary)
+===========================================================
+Total: 13 (HIGH: 12, CRITICAL: 1)
+
+┌───────────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────┬──────────────────────────────────────────────────────────────┐
+│              Library              │ Vulnerability  │ Severity │ Status │ Installed Version │      Fixed Version       │                            Title                             │
+├───────────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/containerd/containerd  │ CVE-2024-25621 │ HIGH     │ fixed  │ v1.7.11           │ 1.7.29                   │ github.com/containerd/containerd: containerd local privilege │
+│                                   │                │          │        │                   │                          │ escalation                                                   │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2024-25621                   │
+├───────────────────────────────────┼────────────────┼──────────┤        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/go-git/go-git/v5       │ CVE-2025-21613 │ CRITICAL │        │ v5.11.0           │ 5.13.0                   │ go-git: argument injection via the URL field                 │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-21613                   │
+│                                   ├────────────────┼──────────┤        │                   │                          ├──────────────────────────────────────────────────────────────┤
+│                                   │ CVE-2025-21614 │ HIGH     │        │                   │                          │ go-git: go-git clients vulnerable to DoS via maliciously     │
+│                                   │                │          │        │                   │                          │ crafted Git server replies...                                │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-21614                   │
+├───────────────────────────────────┼────────────────┤          │        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/opencontainers/runc    │ CVE-2025-31133 │          │        │ v1.1.12           │ 1.2.8, 1.3.3, 1.4.0-rc.3 │ runc: container escape via 'masked path' abuse due to mount  │
+│                                   │                │          │        │                   │                          │ race conditions...                                           │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-31133                   │
+│                                   ├────────────────┤          │        │                   │                          ├──────────────────────────────────────────────────────────────┤
+│                                   │ CVE-2025-52565 │          │        │                   │                          │ runc: container escape with malicious config due to          │
+│                                   │                │          │        │                   │                          │ /dev/console mount and related...                            │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-52565                   │
+│                                   ├────────────────┤          │        │                   │                          ├──────────────────────────────────────────────────────────────┤
+│                                   │ CVE-2025-52881 │          │        │                   │                          │ runc: opencontainers/selinux: container escape and denial of │
+│                                   │                │          │        │                   │                          │ service due to arbitrary write...                            │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-52881                   │
+├───────────────────────────────────┤                │          │        ├───────────────────┼──────────────────────────┤                                                              │
+│ github.com/opencontainers/selinux │                │          │        │ v1.11.0           │ 1.13.0                   │                                                              │
+│                                   │                │          │        │                   │                          │                                                              │
+│                                   │                │          │        │                   │                          │                                                              │
+├───────────────────────────────────┼────────────────┤          │        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ github.com/sigstore/fulcio        │ CVE-2025-66506 │          │        │ v1.4.3            │ 1.8.3                    │ github.com/sigstore/fulcio: Fulcio: Denial of Service via    │
+│                                   │                │          │        │                   │                          │ crafted OpenID Connect (OIDC) token                          │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-66506                   │
+├───────────────────────────────────┼────────────────┤          │        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/crypto               │ CVE-2025-22869 │          │        │ v0.32.0           │ 0.35.0                   │ golang.org/x/crypto/ssh: Denial of Service in the Key        │
+│                                   │                │          │        │                   │                          │ Exchange of golang.org/x/crypto/ssh                          │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-22869                   │
+├───────────────────────────────────┼────────────────┤          │        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/oauth2               │ CVE-2025-22868 │          │        │ v0.18.0           │ 0.27.0                   │ golang.org/x/oauth2/jws: Unexpected memory consumption       │
+│                                   │                │          │        │                   │                          │ during token parsing in golang.org/x/oauth2/jws              │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-22868                   │
+├───────────────────────────────────┼────────────────┤          │        ├───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ stdlib                            │ CVE-2025-47907 │          │        │ v1.22.12          │ 1.23.12, 1.24.6          │ database/sql: Postgres Scan Race Condition                   │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-47907                   │
+│                                   ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                   │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2           │ golang: archive/tar: Unbounded allocation when parsing GNU   │
+│                                   │                │          │        │                   │                          │ sparse map                                                   │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-58183                   │
+│                                   ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                   │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5          │ crypto/x509: golang: Denial of Service due to excessive      │
+│                                   │                │          │        │                   │                          │ resource consumption via crafted...                          │
+│                                   │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-61729                   │
+└───────────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────┴──────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/scm/78ecffea3/scm (gobinary)
+==============================================================
+Total: 4 (HIGH: 4, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2025-22874 │ HIGH     │ fixed  │ v1.24.3           │ 1.24.4          │ crypto/x509: Usage of ExtKeyUsageAny disables policy       │
+│         │                │          │        │                   │                 │ validation in crypto/x509                                  │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-22874                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-47907 │          │        │                   │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│         │                │          │        │                   │                 │ sparse map                                                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│         │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+opt/harness-delegate/client-tools/tf-config-inspect/v1.3/terraform-config-inspect (gobinary)
+============================================================================================
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │  Fixed Version  │                           Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+│ stdlib  │ CVE-2025-47907 │ HIGH     │ fixed  │ v1.22.12          │ 1.23.12, 1.24.6 │ database/sql: Postgres Scan Race Condition                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-47907                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-58183 │          │        │                   │ 1.24.8, 1.25.2  │ golang: archive/tar: Unbounded allocation when parsing GNU │
+│         │                │          │        │                   │                 │ sparse map                                                 │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-58183                 │
+│         ├────────────────┤          │        │                   ├─────────────────┼────────────────────────────────────────────────────────────┤
+│         │ CVE-2025-61729 │          │        │                   │ 1.24.11, 1.25.5 │ crypto/x509: golang: Denial of Service due to excessive    │
+│         │                │          │        │                   │                 │ resource consumption via crafted...                        │
+│         │                │          │        │                   │                 │ https://avd.aquasec.com/nvd/cve-2025-61729                 │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+📣 [34mNotices:[0m
+  - Version 0.68.2 of Trivy is now available, current version is 0.67.2
+
+To suppress version checks, run Trivy scans with the --skip-version-check flag
+

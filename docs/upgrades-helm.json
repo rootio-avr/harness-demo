@@ -1,0 +1,66 @@
+{
+  "binary": "helm",
+  "upgradedPackages": [
+    {
+      "uri": "pkg:golang/stdlib@go1.24.12",
+      "digest": null,
+      "localName": "golang-stdlib",
+      "annotations": {
+        "originVersion": "v1.20.11",
+        "patchedVersion": "go1.24.12",
+        "type": "upgraded-package",
+        "upgradeType": "go-runtime",
+        "binary": "helm"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/containerd/containerd@v1.7.30",
+      "digest": null,
+      "localName": "containerd",
+      "annotations": {
+        "originVersion": "v1.7.6",
+        "patchedVersion": "v1.7.30",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "helm"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/docker/docker@v27.5.0+incompatible",
+      "digest": null,
+      "localName": "docker",
+      "annotations": {
+        "originVersion": "v24.0.7+incompatible",
+        "patchedVersion": "v27.5.0+incompatible",
+        "type": "upgraded-package",
+        "upgradeType": "major",
+        "binary": "helm"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/crypto@v0.47.0",
+      "digest": null,
+      "localName": "crypto",
+      "annotations": {
+        "originVersion": "v0.14.0",
+        "patchedVersion": "v0.47.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "helm"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/oauth2@v0.32.0",
+      "digest": null,
+      "localName": "oauth2",
+      "annotations": {
+        "originVersion": "v0.8.0",
+        "patchedVersion": "v0.32.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "helm"
+      }
+    }
+  ],
+  "totalUpgrades": 5
+}

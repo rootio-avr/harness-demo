@@ -1,0 +1,111 @@
+[
+  {
+    "uri": "pkg:golang/stdlib@go1.24.12",
+    "digest": null,
+    "localName": "golang-stdlib",
+    "annotations": {
+      "originVersion": "go1.20.6",
+      "patchedVersion": "go1.24.12",
+      "type": "upgraded-package",
+      "upgradeType": "go-runtime",
+      "binary": "terraform-config-inspect",
+      "source": "github.com/hashicorp/terraform-config-inspect",
+      "commit": "2d94e3d"
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/hashicorp/hcl/v2@v2.24.0",
+    "digest": null,
+    "localName": "github.com/hashicorp/hcl/v2",
+    "annotations": {
+      "originVersion": "v2.0.0",
+      "patchedVersion": "v2.24.0",
+      "type": "upgraded-package",
+      "upgradeType": "major",
+      "binary": "terraform-config-inspect"
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/zclconf/go-cty@v1.17.0",
+    "digest": null,
+    "localName": "github.com/zclconf/go-cty",
+    "annotations": {
+      "originVersion": "v1.1.0",
+      "patchedVersion": "v1.17.0",
+      "type": "upgraded-package",
+      "upgradeType": "major",
+      "binary": "terraform-config-inspect"
+    }
+  },
+  {
+    "uri": "pkg:golang/golang.org/x/text@v0.33.0",
+    "digest": null,
+    "localName": "golang.org/x/text",
+    "annotations": {
+      "originVersion": "v0.3.8",
+      "patchedVersion": "v0.33.0",
+      "type": "upgraded-package",
+      "upgradeType": "major",
+      "binary": "terraform-config-inspect",
+      "vulnerabilitiesFixed": [
+        "CVE-2024-24790",
+        "CVE-2023-39325",
+        "CVE-2023-45283",
+        "CVE-2023-45288",
+        "CVE-2024-24783",
+        "CVE-2024-24784",
+        "CVE-2024-24785",
+        "CVE-2024-34155"
+      ]
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/google/go-cmp@v0.6.0",
+    "digest": null,
+    "localName": "github.com/google/go-cmp",
+    "annotations": {
+      "originVersion": "v0.3.0",
+      "patchedVersion": "v0.6.0",
+      "type": "upgraded-package",
+      "upgradeType": "minor",
+      "binary": "terraform-config-inspect"
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/agext/levenshtein@v1.2.3",
+    "digest": null,
+    "localName": "github.com/agext/levenshtein",
+    "annotations": {
+      "originVersion": "v1.2.2",
+      "patchedVersion": "v1.2.3",
+      "type": "upgraded-package",
+      "upgradeType": "patch",
+      "binary": "terraform-config-inspect"
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/mitchellh/go-wordwrap@v1.0.1",
+    "digest": null,
+    "localName": "github.com/mitchellh/go-wordwrap",
+    "annotations": {
+      "originVersion": "v1.0.0",
+      "patchedVersion": "v1.0.1",
+      "type": "upgraded-package",
+      "upgradeType": "patch",
+      "binary": "terraform-config-inspect"
+    }
+  },
+  {
+    "uri": "pkg:golang/github.com/apparentlymart/go-textseg@v15.0.0",
+    "digest": null,
+    "localName": "github.com/apparentlymart/go-textseg",
+    "annotations": {
+      "originVersion": "v1.0.0",
+      "patchedVersion": "v15.0.0",
+      "type": "upgraded-package",
+      "upgradeType": "major",
+      "binary": "terraform-config-inspect",
+      "note": "Major version upgrade from v1 to v15"
+    }
+  }
+]

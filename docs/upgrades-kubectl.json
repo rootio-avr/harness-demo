@@ -1,0 +1,30 @@
+{
+  "binary": "kubectl",
+  "upgradedPackages": [
+    {
+      "uri": "pkg:golang/stdlib@go1.24.11",
+      "digest": null,
+      "localName": "golang-stdlib",
+      "annotations": {
+        "originVersion": "v1.21.7",
+        "patchedVersion": "go1.24.11",
+        "type": "upgraded-package",
+        "upgradeType": "go-runtime",
+        "binary": "kubectl"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/oauth2@v0.27.0",
+      "digest": null,
+      "localName": "oauth2",
+      "annotations": {
+        "originVersion": "v0.8.0",
+        "patchedVersion": "v0.27.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "kubectl"
+      }
+    }
+  ],
+  "totalUpgrades": 2
+}

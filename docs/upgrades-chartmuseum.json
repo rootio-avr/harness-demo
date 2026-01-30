@@ -1,0 +1,54 @@
+{
+  "binary": "chartmuseum",
+  "upgradedPackages": [
+    {
+      "uri": "pkg:golang/stdlib@go1.24.12",
+      "digest": null,
+      "localName": "golang-stdlib",
+      "annotations": {
+        "originVersion": "v1.24.1",
+        "patchedVersion": "go1.24.12",
+        "type": "upgraded-package",
+        "upgradeType": "go-runtime",
+        "binary": "chartmuseum"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/containerd/containerd@v1.7.29",
+      "digest": null,
+      "localName": "containerd",
+      "annotations": {
+        "originVersion": "v1.7.27",
+        "patchedVersion": "v1.7.29",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "chartmuseum"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/oauth2@v0.34.0",
+      "digest": null,
+      "localName": "oauth2",
+      "annotations": {
+        "originVersion": "v0.23.0",
+        "patchedVersion": "v0.34.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "chartmuseum"
+      }
+    },
+    {
+      "uri": "pkg:golang/helm.sh/helm/v3@v3.17.4",
+      "digest": null,
+      "localName": "v3",
+      "annotations": {
+        "originVersion": "v3.17.3",
+        "patchedVersion": "v3.17.4",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "chartmuseum"
+      }
+    }
+  ],
+  "totalUpgrades": 4
+}

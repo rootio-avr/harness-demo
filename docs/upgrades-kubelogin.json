@@ -1,0 +1,66 @@
+{
+  "binary": "kubelogin",
+  "upgradedPackages": [
+    {
+      "uri": "pkg:golang/stdlib@go1.24.12",
+      "digest": null,
+      "localName": "golang-stdlib",
+      "annotations": {
+        "originVersion": "v1.23.7",
+        "patchedVersion": "go1.24.12",
+        "type": "upgraded-package",
+        "upgradeType": "go-runtime",
+        "binary": "kubelogin"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.2",
+      "digest": null,
+      "localName": "v4",
+      "annotations": {
+        "originVersion": "v4.5.1",
+        "patchedVersion": "v4.5.2",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "kubelogin"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.3.0",
+      "digest": null,
+      "localName": "v5",
+      "annotations": {
+        "originVersion": "v5.2.1",
+        "patchedVersion": "v5.3.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "kubelogin"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/crypto@v0.45.0",
+      "digest": null,
+      "localName": "crypto",
+      "annotations": {
+        "originVersion": "v0.31.0",
+        "patchedVersion": "v0.45.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "kubelogin"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/oauth2@v0.27.0",
+      "digest": null,
+      "localName": "oauth2",
+      "annotations": {
+        "originVersion": "v0.10.0",
+        "patchedVersion": "v0.27.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "kubelogin"
+      }
+    }
+  ],
+  "totalUpgrades": 5
+}

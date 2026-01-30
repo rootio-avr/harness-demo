@@ -1,0 +1,90 @@
+{
+  "binary": "oc",
+  "upgradedPackages": [
+    {
+      "uri": "pkg:golang/stdlib@go1.24.11",
+      "digest": null,
+      "localName": "golang-stdlib",
+      "annotations": {
+        "originVersion": "v1.22.12",
+        "patchedVersion": "go1.24.11",
+        "type": "upgraded-package",
+        "upgradeType": "go-runtime",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/go-git/go-git/v5@v5.13.1",
+      "digest": null,
+      "localName": "v5",
+      "annotations": {
+        "originVersion": "v5.11.0",
+        "patchedVersion": "v5.13.1",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/opencontainers/runc@v1.1.13",
+      "digest": null,
+      "localName": "runc",
+      "annotations": {
+        "originVersion": "v1.1.12",
+        "patchedVersion": "v1.1.13",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/opencontainers/selinux@v1.12.0",
+      "digest": null,
+      "localName": "selinux",
+      "annotations": {
+        "originVersion": "v1.11.0",
+        "patchedVersion": "v1.12.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/github.com/sigstore/fulcio@v1.4.5",
+      "digest": null,
+      "localName": "fulcio",
+      "annotations": {
+        "originVersion": "v1.4.3",
+        "patchedVersion": "v1.4.5",
+        "type": "upgraded-package",
+        "upgradeType": "patch",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/crypto@v0.40.0",
+      "digest": null,
+      "localName": "crypto",
+      "annotations": {
+        "originVersion": "v0.32.0",
+        "patchedVersion": "v0.40.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "oc"
+      }
+    },
+    {
+      "uri": "pkg:golang/golang.org/x/oauth2@v0.30.0",
+      "digest": null,
+      "localName": "oauth2",
+      "annotations": {
+        "originVersion": "v0.18.0",
+        "patchedVersion": "v0.30.0",
+        "type": "upgraded-package",
+        "upgradeType": "minor",
+        "binary": "oc"
+      }
+    }
+  ],
+  "totalUpgrades": 7
+}
